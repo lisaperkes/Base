@@ -1,0 +1,21 @@
+{
+  "name": "liquid-theme",
+  "version": "1.2.0",
+  "homepage": "http://liquid.getfluid.com",
+  "authors": [
+    "Zack Warren <zack@getfluid.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "directory" : "assets/vendor",
+  "dependencies": {
+    "foundation-sites": "latest",
+    "motion-ui": "latest",
+    "slick.js": "latest"
+  }
+}

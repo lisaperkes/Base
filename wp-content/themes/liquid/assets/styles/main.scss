@@ -1,0 +1,18 @@
+/*===========================================================*/
+/*						     Liquid Theme Custom Sass                   */
+/*===========================================================*/
+
+/*=================== Foundation Core =======================*/
+@import 'settings';
+@import 'foundation'; 
+
+/*======================== Vendor ===========================*/
+//  @import '../vendor/slick.js/slick/slick.scss';
+//  @import '../vendor/slick.js/slick/slick-theme.scss';
+
+/*================= Site Layouts/Mixins =====================*/
+@import 'mixins';
+@import 'layouts/site';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/home';

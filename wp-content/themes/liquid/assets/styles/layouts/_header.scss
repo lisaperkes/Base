@@ -1,0 +1,113 @@
+// Extends Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group header
+////
+
+/// Height of topbar at $topbar-breakpoint and up.
+/// @type Number
+$topbar-height: 65px !default;
+
+/// Reset the default $topbar-padding value.
+/// @type Number
+$topbar-padding: 0 1rem;
+
+/// Media query to show full menu
+/// @type String
+$topbar-breakpoint: medium !default;
+
+/// Height of title bar below $topbar-breakpoint.
+/// @type Number
+$titlebar-height: 45px !default;
+
+/// Reset the default $titlebar-padding value.
+/// @type Number
+$titlebar-padding: 0 0.5rem;
+
+/// Add nesting to submenu's. Best used with accordion menu.
+/// @type Number
+$titlebar-nested: false !default;
+
+/// Adds styles for a top bar container.
+@include breakpoint($topbar-breakpoint) {
+	.top-bar {
+		.menu-logo {
+			height: rem-calc($topbar-height);
+			display: table;
+			background: transparent;
+			
+			li {
+				a {
+					padding: $topbar-padding;
+				}
+				
+				img {
+					margin-right: 0;
+					max-height: rem-calc($topbar-height);
+				}
+			}
+		}
+		
+		.menu-items {
+			> li {
+				> a {
+					height: rem-calc($topbar-height);
+					line-height: rem-calc($topbar-height);
+					padding: 0 1rem;
+				}
+			}
+		}
+		.dropdown.menu > .is-dropdown-submenu-parent.has-submenu > a::after {
+			// Hides arrow on top-level menu items
+			display: none;
+		}
+	}
+}
+
+/// Removes float on 'medium' if $topbar-breakpoint is large.
+@if $topbar-breakpoint == 'large' {
+	.top-bar-right {
+		float: none;
+		
+		@include breakpoint($topbar-breakpoint) {
+			float: right;
+		}
+	}
+}
+
+/// Adds nesting to submenu's if $title-bar nestes is true.
+@if $titlebar-nested == true {
+	.top-bar {
+		.is-drilldown-submenu,
+		.is-accordion-submenu {
+			@include menu-nested;
+		}
+	}
+}
+
+/// Adds styles for a title bar container.
+.title-bar {
+	padding: 0;
+	
+	.menu {
+		height: rem-calc($titlebar-height);
+		display: table;
+		
+		li {
+			&.menu-toggle-icon {
+				font-size: 0;
+			}
+			
+			a {
+				padding: $titlebar-padding;
+			}
+			
+			img {
+				margin-right: 0;
+				max-height: rem-calc($titlebar-height);
+			}
+		}
+	}	
+}

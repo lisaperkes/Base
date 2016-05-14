@@ -1,0 +1,33 @@
+{
+  "name": "liquid-theme",
+  "author": "Zack Warren <zack@getfluid.com>",
+  "homepage": "http://liquid.getfluid.com",
+  "version": "1.2.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/fluid-dev/liquid-theme"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-autoprefixer": "~3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-livereload": "~3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-sass": "~2.1.0",
+    "gulp-sourcemaps": "~1.6.0gu",
+    "gulp-uglify": "~1.5.1"
+  }
+}
